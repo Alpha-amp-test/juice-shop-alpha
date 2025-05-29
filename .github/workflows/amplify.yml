@@ -1,4 +1,4 @@
-# .github/workflows/amplify.yml
+
 ---
   name: Amplify Security
   on:
