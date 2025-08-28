@@ -29,8 +29,8 @@ const datacache = require('./datacache')
 const mongodb = require('./mongodb')
 const security = require('../lib/insecurity')
 
-const fs = require('fs')
 const util = require('util')
+const fs = require('fs')
 const { safeLoad } = require('js-yaml')
 const Entities = require('html-entities').AllHtmlEntities
 const entities = new Entities()
