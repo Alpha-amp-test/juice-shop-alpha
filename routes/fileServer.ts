@@ -31,7 +31,7 @@ module.exports = function servePublicFiles () {
       verifySuccessfulPoisonNullByteExploit(file)
 
       const safeFilePath = path.join(__dirname, 'ftp', path.basename(file));
-      res.sendFile(safeFilePath)
+      res.sendFile(path.normalize(safeFilePath));
     } else {
       res.status(403)
       next(new Error('Only .md and .pdf files are allowed!'))
