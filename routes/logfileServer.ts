@@ -7,6 +7,7 @@ import path = require('path')
 import { Request, Response, NextFunction } from 'express'
 
 module.exports = function serveLogFiles () {
+
   return ({ params }: Request, res: Response, next: NextFunction) => {
     const file = params.file
 
@@ -17,4 +18,5 @@ module.exports = function serveLogFiles () {
       next(new Error('File names cannot contain forward slashes!'))
     }
   }
+
 }
